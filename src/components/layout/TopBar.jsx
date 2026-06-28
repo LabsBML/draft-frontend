@@ -8,9 +8,9 @@ export const TopBar = ({ onMenuClick }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Extract user details with safe defaults fallback[cite: 2]
-  const fullName = user?.name || user?.fullName || 'Atharv Malve';
-  const email = user?.email || 'atharv@example.com';
+  // Extract user details with safe polished defaults fallback
+  const fullName = user?.name || user?.fullName || 'Guest User';
+  const email = user?.email || 'guest@example.com';
   const role = user?.role || 'College Applicant';
   
   // Dynamic initials generation
@@ -48,7 +48,7 @@ export const TopBar = ({ onMenuClick }) => {
       style={{ fontFamily: "'Inter', sans-serif" }}
       className="sticky top-0 right-0 left-0 bg-white/72 backdrop-blur-xl border-b border-neutral-200/60 h-[64px] z-30 px-4 lg:px-6 flex items-center justify-between lg:justify-end"
     >
-      {/* Mobile Burger Navigation Controls Menu Button[cite: 2] */}
+      {/* Mobile Burger Navigation Controls Menu Button */}
       <button 
         onClick={onMenuClick}
         className="p-2 text-neutral-500 hover:text-neutral-900 rounded-lg lg:hidden transition-colors duration-180 ease-out"
@@ -56,7 +56,7 @@ export const TopBar = ({ onMenuClick }) => {
         <Menu className="w-5 h-5" strokeWidth={1.9} />
       </button>
 
-      {/* Right Side Utility Controls Panel[cite: 2] */}
+      {/* Right Side Utility Controls Panel */}
       <div className="flex items-center gap-4">
         
         {/* Unified Premium Profile Component Interactive Anchor */}
